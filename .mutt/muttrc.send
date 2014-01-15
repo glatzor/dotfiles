@@ -1,0 +1,3 @@
+send-hook '~A' 'my_hdr From: Sebastian Heinlein <sebi@glatzor.de>'
+send-hook '~t @dpool\.net' 'my_hdr From: Sebastian Heinlein <sh@dpool.net>'
+send-hook '~l' 'my_hdr From: Sebastian Heinlein <devel@glatzor.de>'

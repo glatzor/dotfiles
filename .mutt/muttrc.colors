@@ -1,0 +1,27 @@
+#---- Mutt Colors for White Background -------
+color    hdrdefault    blue            default   
+color    quoted        red             default   
+color    signature     brightblack     default   
+color    indicator     brightwhite     red
+color    attachment    blue            default
+color    error         red             default   
+color    message       blue            default   
+color    search        brightwhite     magenta
+color    status        brightyellow    blue
+color    tree          red             default   
+color    normal        default         default   
+color    tilde         green           default   
+color    bold          brightyellow    default   
+color    markers       red             default
+
+color    index         brightdefault   default ~U  # Unread mail
+color    index         yellow          default ~T  # Tagged
+
+color    index         brightgreen     default "~U ~y bug"
+color    index         green           default "~y bug"
+color    index         blue            default "~y admin"
+color    index         brightblue      default "~y admin ~U" 
+
+color    index         magenta         default ~tangelique 
+color    index         brightmagenta   default "~U ~tangelique"
+color    index         red             default ~D  # Delted mail

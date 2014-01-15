@@ -1,0 +1,118 @@
+set charset=UTF8
+unset beep                        # Just annoying
+set uncollapse_jump
+
+# Reduce key presses
+set auto_tag                      # Automatically apply actions to tagged msg
+set noconfirmappend
+unset wait_key
+
+# Layout
+set index_format="%Z %{%b %d} %?M?<%2M>&%4c? %-18.18L %?Y?[%Y] ?%s"
+set folder_format="%2C %f %> %t %N %8s"
+unset help                        # Don't show the help menu
+set status_on_top                 # Show status information on top
+set xterm_set_titles              # Set the terminal title
+
+# Local mail folders
+set mbox_type=Maildir
+#set maildir_mtime                 # improve sorting by date
+set folder=$HOME/.mail
+source ~/.mutt/muttrc.mailboxes   # List of mailboxes processed by offlineimap
+set header_cache=~/.hcache        # Cache mail headers
+set spoolfile=+INBOX              # location of the spool file
+set move=no                       # keep read mails in the spoolfile
+set postponed=+Drafts             # location of the drafts folder
+fcc-hook ~u /dev/null             # Don't store mails sent to a mailing list
+fcc-hook ~A +Archiv.`date +%Y`      # Store sent mails in yearly subfolders
+
+# Offlineimap interaction
+macro index,pager G "<sync-mailbox><shell-escape>offlineimap -l ~/.offlineimap/mutt.log -o -u TTY.TTYUI;notmuch new<enter><refresh>" "Sync local folder with remote server"
+# macro index,pager G "!killall -u `echo $USER` -SIGUSR1 offlineimap\n<refresh>" "Sync local folder with remote server
+macro index H <refresh> "Refresh mailbox"
+
+macro index,pager \Cx "<change-folder>+INBOX<enter>" "Change to the INBOX" 
+macro index,pager \Cl "<change-folder>+Mailinglisten<enter>" \
+                      "Change to the mailing list folder"
+macro index,pager \Ca "<change-folder>+Archiv.`date +%Y`<enter>" \
+                      "Change to the current archive folder"
+
+macro index,pager a "<save-message>+Archiv.`date +%Y`\n" "Archive the message"
+macro index,pager S "<save-message>+Spam.Lernen\n" "Learn message as spam"
+
+# Sorting
+set sort_browser=alpha
+folder-hook . set sort=date
+folder-hook INBOX set sort=reverse-score
+folder-hook Mailinglisten set sort=threads
+folder-hook Archiv\.[0-9]+ set sort=threads
+folder-hook $HOME/.cache/notmuch/mutt/results set sort=threads
+set sort_aux=last-date-received 
+
+# Only show a subset of all headers
+ignore *
+unignore From: To: CC: Date: Subject: Reply-To: BCC:
+hdr_order From: Subject: To: CC: BCC: Reply-To: Date:
+
+# Content handling
+set implicit_autoview             # Show known mime types in the mail body
+alternative_order text/enriched text/plain text/html
+set mailcap_path=~/.mutt/mailcap:/etc/mailcap
+macro index,pager \Cb "<pipe-message>urlview<enter>" \
+                      "Extract URLs out of a message"
+
+set pager_index_lines=5           # Show the surrounding message in the pager
+set tilde                         # Fill blank lines with ~
+set pager_stop                    # Don't automatically switch to the next msg
+set pager_context=5               # Show a small context before and after
+
+# Identity
+set realname="Sebastian Heinlein"
+set from=sebi@glatzor.de
+set reverse_name                  # Automatically response with the To address
+alternates sh@dpool.net|sebastian.heinlein@web.de|glatzor@ubuntu.com|@glatzor.de
+
+alias privat    Sebastian Heinlein     <sebi@glatzor.de>
+alias dpool     Sebastian Heinlein     <sebastian.heinlein@dpool.com>
+alias brav      Sebastian Heinlein     <sebastian.heinlein@glatzor.de>
+alias ubuntu    Sebastian Heinlein     <glatzor@ubuntu.com>
+alias devel     Sebastian Heinlein     <devel@glatzor.de>
+macro compose v "<edit-from>^U<tab>" "Select from" 
+ 
+# VIM as mail editor
+set editor="/usr/bin/vim -X -f -c 'set spell spelllang=de,en' \
+            -c 'set filetype=mail' -c 'set tw=70 et' +/^$"
+set edit_headers                  # Allow to edit the mail headers with vim
+
+set sendmail="/usr/bin/msmtp -v"     # Use msmtp to send mails
+set use_envelope_from
+
+set pgp_autosign                  # Automatically sign all outgoing messages
+set pgp_sign_as=0xCF982D18       # My default gnupg key
+set pgp_replyencrypt
+set pgp_use_gpg_agent
+set fcc_clear                     # Store sent mails decrpyted and unsigned 
+my_hdr X-PGP-Key: fp="D0BF 65B7 DBE2 8DB6 2BED  BF1B 683C 53C7 CF98 2D18"\; id="0xCF982D18"\; get=<hkp://pgp.mit.edu/pks/lookup?search=0x683C53C7CF982D18&op=get>\; get=<https://www.glatzor.de/files/gnupg/CF982D18.pub.asc>
+
+# Address book
+#set query_command="abook --mutt-query '%s'"
+#macro pager,index A "|abook --add-email\n" "Add sender to address book"
+set query_command="mutt-eds-query '%s'"
+
+source ~/.mutt/muttrc.score
+source ~/.mutt/muttrc.lists
+source ~/.mutt/muttrc.colors
+source ~/.mutt/muttrc.send
+
+macro index y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n\
+               <edit><clear-flag>N\
+               <enter-command>set editor=vim\n" "Append label"
+macro index,pager Y "<enter-command>set editor=\"~/.mutt/editlabel menu\"\n\
+                     <edit><sync-mailbox><clear-flag>N\
+                     <enter-command>set editor=vim\n" "Edit labels"
+macro index \Cy "<limit>~y " "Limit view to label"
+
+set print_command="muttprint -p - | ps2pdf - $HOME/muttprint.pdf"
+
+macro index,pager \Ct "<pipe-message>mutt2todotxt<enter>" "Convert mail to task"
+macro index q "<shell-escape>notmuch new<enter><quit>" "Quit mutt"

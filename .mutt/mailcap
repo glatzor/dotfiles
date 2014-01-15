@@ -1,0 +1,6 @@
+text/html; links -force-html -dump %s;needsterminal; nametemplate=%s.html; copiousoutput
+application/pdf; mupdf %s
+image/*; display -resize 1024x768 -auto-orient %s ; test=test -n $DISPLAY
+# Convert images to text using the netpbm tools
+image/*;  (anytopnm %s | pnmscale -xysize 80 46 |\
+	ppmtopgm | pgmtopbm | pbmtoascii -1x2 ) 2>&1; copiousoutput

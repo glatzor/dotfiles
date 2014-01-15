@@ -1,0 +1,11 @@
+# SCORING
+folder-hook . unscore *
+# New mails in the INBOX are top
+folder-hook INBOX score ~A +1
+folder-hook INBOX score ~N +1
+folder-hook INBOX score ~U +1
+folder-hook INBOX score ~f"nagios@nagios.glatzor.de" +1
+folder-hook INBOX score ~yadmin -10
+folder-hook INBOX score ~ybug -5
+# Raise score of threads in which I take part
+#folder-hook Listen score ~(~P) 20
