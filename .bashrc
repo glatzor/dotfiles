@@ -24,7 +24,9 @@ function prompt_command() {
 		echo -ne "\033]0;${HOSTNAME}: ${PWD}\007"
 		# Optionally include the git branch if we are located in a
 		# git repository and not in the home directory
-		if [ -e /usr/bin/git -a "$PWD" != "$HOME" ]; then
+		GIT_DIR="$(git rev-parse --git-dir 2>/dev/null)"
+		if [ -e /usr/bin/git -a "$PWD" != "$HOME" \
+		     -a "$GIT_DIR" != "$HOME/.git" ]; then
 			#export PS1='\[\033[0;33m\]\w\[\033[0;35m\]$(__git_ps1 "(%s)")\[\033[0m\]\$ '
 			__git_ps1 '\[\033[0;33m\]\w\[\033[0m\]' '\[\033[0m\]\$ '
 		else
