@@ -1,5 +1,14 @@
 eval $(lesspipe)
 
+# Use colors in the git prompt
+export GIT_PS1_SHOWCOLORHINTS=1
+# Append + for staged and * for unstaged changes
+export GIT_PS1_SHOWDIRTYSTATE=1
+# Append $ if there are stashed changes
+export GIT_PS1_SHOWSTASHSTATE=1
+# Append $ if there are untracked changes
+#export GIT_PS1_SHOWUNTRACKEDFILES=1
+
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
@@ -16,7 +25,8 @@ function prompt_command() {
 		# Optionally include the git branch if we are located in a
 		# git repository and not in the home directory
 		if [ -e /usr/bin/git -a "$PWD" != "$HOME" ]; then
-			export PS1='\[\033[0;33m\]\w\[\033[0;35m\]$(__git_ps1 "(%s)")\[\033[0m\]\$ '
+			#export PS1='\[\033[0;33m\]\w\[\033[0;35m\]$(__git_ps1 "(%s)")\[\033[0m\]\$ '
+			__git_ps1 '\[\033[0;33m\]\w\[\033[0m\]' '\[\033[0m\]\$ '
 		else
 			export PS1='\[\033[0;33m\]\w\[\033[0m\]\$ '
 		fi
