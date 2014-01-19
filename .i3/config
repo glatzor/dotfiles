@@ -187,6 +187,10 @@ bindsym $mod+dead_circumflex scratchpad show
 # Start with a terminal in the scrathpad
 exec --no-startup-id i3-msg 'exec uxterm; move scratchpad'
 
+# Screenshot taker
+bindsym --release $mod+Print exec --no-startup-id import -window root $HOME/screenshot-$(date +%Y-%m-%d).png
+bindsym --release $mod+Shift+Print exec --no-startup-id import $HOME/screenshot-$(date +%Y-%m-%d).png
+
 # background image
 exec feh --bg-fill /home/renate/Bilder/2013/Matilda/DSC_3585.JPG
 ## DPMS monitor setting (standby -> suspend -> off) (seconds)
