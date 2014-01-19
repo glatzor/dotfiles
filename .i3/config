@@ -149,6 +149,9 @@ bindsym $mod+r mode "resize"
 bar {
 	font pango:Terminus 13px
         status_command i3status
+	colors {
+		statusline "#888888"
+	}
 }
 
 
