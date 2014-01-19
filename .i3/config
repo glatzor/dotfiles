@@ -168,10 +168,8 @@ for_window [class="Iceweasel"] focus child, layout stacking, focus
 exec --no-startup-id i3-msg 'workspace "1:main"; exec uxterm mutt; mark mailer'
 exec --no-startup-id i3-msg 'workspace "1:main"; exec uxterm' 
 exec --no-startup-id i3-msg 'workspace "2:web"; exec /usr/bin/firefox -browser' 
-#exec --no-startup-id i3-msg 'workspace 4:dpool; exec /usr/bin/firefox -new-window chrome://lastpass/content/home2.xul' 
-#exec --no-startup-id i3-msg 'workspace 4:dpool; exec /usr/bin/firefox -new-window http://dpool.mite.yo.lk/login' 
+exec --no-startup-id i3-msg 'workspace 4:dpool; exec /usr/bin/firefox -p dpool -no-remote -new-instance' 
 exec --no-startup-id i3-msg 'workspace "4:dpool"; exec uxterm' 
-
 
 bindsym $mod+m [con_mark="mailer"] focus
 
