@@ -1,0 +1,26 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# suit to get started fast.
+
+[general]
+accounts = glatzor
+pythonfile = ~/.offlineimap.py
+
+[Account glatzor]
+localrepository = Local
+autorefresh = 5
+quick = 10
+remoterepository = Glatzor
+maxconnections = 2
+holdconnectionopen = yes
+
+[Repository Local]
+type = Maildir
+localfolders = ~/.mail
+
+[Repository Glatzor]
+type = IMAP
+remotehost = mail.glatzor.de
+remoteusereval = get_username("mail.glatzor.de")
+remotepasseval = get_password("mail.glatzor.de")
+ssl = yes
+folderfilter = lambda foldername: foldername in ['INBOX', "Drafts", "Spam.Lernen", "Mailinglisten"] or foldername.startswith("Archiv")
