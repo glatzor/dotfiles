@@ -162,7 +162,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
 #bindsym XF86Launch1 exec /usr/bin/pactl play-sample that_was_easy
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
-#bindsym XF86SreenSaver exec /zs/bin/i3lock -c 000000
+bindsym XF86SreenSaver exec xautolock -locknow
 
 # Window grouping
 for_window [class="Iceweasel"] focus child, layout stacking, focus
