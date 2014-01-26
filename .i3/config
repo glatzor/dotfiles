@@ -208,3 +208,4 @@ exec xautolock
 
 exec nm-applet
 exec owncloud
+exec /usr/bin/gnome-keyring-daemon --start --components=secrets
