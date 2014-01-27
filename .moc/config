@@ -70,11 +70,13 @@
 # Example:    MusicDir = "/home/joe/music"
 #
 #MusicDir =
+MusicDir = /home/renate/Musik
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
 # the command line takes precedence.
 #StartInMusicDir = no
+StartInMusicDir = yes
 
 # How to sort?  FileName is the option's only value for now.
 #Sort = FileName
@@ -192,6 +194,7 @@
 # Example:    Theme = laras_theme
 #
 #Theme =
+Theme = darkdot_theme
 
 # The theme used when running on an xterm.
 #
@@ -633,6 +636,7 @@
 # Example:    OnSongChange = "/home/jack/.moc/myscript %a %r"
 #
 #OnSongChange =
+OnSongChange = "/home/renate/bin/moc-notify %a %t %d"
 
 # If RepeatSongChange is 'yes' then MOC will execute the command every time
 # a song starts playing regardless of whether or not it is just repeating.
