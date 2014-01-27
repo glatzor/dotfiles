@@ -164,6 +164,12 @@ bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
 bindsym XF86SreenSaver exec xautolock -locknow
 
+# mocp bindings
+bindsym XF86AudioStop exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --stop
+bindsym XF86AudioPlay exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --toggle-pause
+bindsym XF86AudioNext exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --next
+bindsym XF86AudioPrev exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --previous
+
 # Window grouping
 for_window [class="Iceweasel"] focus child, layout stacking, focus
 
