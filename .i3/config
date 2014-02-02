@@ -212,6 +212,5 @@ exec pactl set-sink-volume 0 '20%'
 # Configuration is in .Xresources
 exec xautolock
 
-exec nm-applet
 exec owncloud
 exec /usr/bin/gnome-keyring-daemon --start --components=secrets
