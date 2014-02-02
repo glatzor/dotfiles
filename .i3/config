@@ -205,6 +205,8 @@ bindsym --release $mod+Shift+Print exec --no-startup-id import $HOME/screenshot-
 
 # background image
 exec feh --bg-fill Bilder/Wallpapers/tildchen-wide.JPG
+# Load X configuration parameters
+xrdb -merge ~/.Xresources
 ## DPMS monitor setting (standby -> suspend -> off) (seconds)
 exec xset dpms 300 600 900
 ## Disable beeps
