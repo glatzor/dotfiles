@@ -29,6 +29,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+ 
+# enter an i3 wm command
+bindsym $mod+i exec --no-startup-id i3-input
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
