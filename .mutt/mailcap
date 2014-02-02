@@ -1,4 +1,4 @@
-text/html; links -force-html -dump %s;needsterminal; nametemplate=%s.html; copiousoutput
+text/html; elinks -dump -eval "set document.codepage.assume = %{charset}" %s; copiousoutput
 application/pdf; mupdf %s
 image/*; display -resize 1024x768 -auto-orient %s ; test=test -n $DISPLAY
 # Convert images to text using the netpbm tools
