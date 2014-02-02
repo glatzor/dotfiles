@@ -48,3 +48,6 @@ export MUTTJUMP_INDEXER="notmuch"
 
 # Append commands to the bash history instead of replacing it on exit
 shopt -s histappend
+
+# Use nice fonts in Java
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
