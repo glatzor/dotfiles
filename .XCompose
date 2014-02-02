@@ -1,0 +1,125 @@
+# See https://github.com/kragen/xcompose/blob/master/dotXCompose
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+<Multi_key> <S> <N> <O> <W> : "☃" U2603 # SNOWMAN
+
+<Multi_key> <Left> <Left> : "←" leftarrow # LEFTWARDS ARROW
+<Multi_key> <Up> <Up> : "↑" uparrow # UPWARDS ARROW
+<Multi_key> <Right> <Right> : "→" rightarrow # RIGHTWARDS ARROW
+<Multi_key> <Down> <Down> : "↓" downarrow # DOWNWARDS ARROW
+<Multi_key> <Left> <Right> : "↔" U2194 # LEFT RIGHT ARROW (kragen's)
+<Multi_key> <Right> <Left> : "↔" U2194 # LEFT RIGHT ARROW (kragen's)
+<Multi_key> <Up> <Down> : "↕" U2195 # UP DOWN ARROW (kragen's)
+<Multi_key> <Up> <ampersand> <Down> : "⇵" U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
+<Multi_key> <Down> <Left> : "↵" U21B5 # DOWNWARDS ARROW WITH CORNER LEFTWARDS
+<Multi_key> <Left> <o> : "⟲" U27F2 # ANTICLOCKWISE GAPPED CIRCLE ARROW
+<Multi_key> <Right> <o> : "⟳" U27F3 # CLOCKWISE GAPPED CIRCLE ARROW
+<Multi_key> <Left> <c> : "↺" U21BA # ANTICLOCKWISE OPEN CIRCLE ARROW
+<Multi_key> <Right> <c> : "↻" U21BB # CLOCKWISE OPEN CIRCLE ARROW
+<Multi_key> <Left> <asciitilde> : "⇜" U21DC # LEFTWARDS SQUIGGLE ARROW
+<Multi_key> <Right> <asciitilde> : "⇝" U21DD # RIGHTWARDS SQUIGGLE ARROW
+<Multi_key> <Left> <bar> : "⇤" U21E4 # LEFTWARDS ARROW TO BAR
+<Multi_key> <Right> <bar> : "⇥" U21E5 # RIGHTWARDS ARROW TO BAR
+<Multi_key> <Left> <minus> : "⇠" U21E0 # LEFTWARDS DASHED ARROW
+<Multi_key> <Up> <minus> : "⇡" U21E1 # UPWARDS DASHED ARROW
+<Multi_key> <Right> <minus> : "⇢" U21E2 # RIGHTWARDS DASHED ARROW
+<Multi_key> <Down> <minus> : "⇣" U21E3 # DOWNWARDS DASHED ARROW
+
+# Arrow keys don't always work: some apps trap them for cursor control and
+# other boring things. The arrow symbols have alternate keystrokes. Do
+# we need others for these printer's fists? If so, what? The -= and =-
+# we had before are not necessarily the best choices.
+<Multi_key> <F> <Left> : "☚" U261A # BLACK LEFT POINTING INDEX
+<Multi_key> <F> <Right> : "☛" U261B # BLACK RIGHT POINTING INDEX
+<Multi_key> <f> <Left> : "☜" U261C # WHITE LEFT POINTING INDEX
+<Multi_key> <f> <Up> : "☝" U261D # WHITE UP POINTING INDEX
+<Multi_key> <f> <Right> : "☞" U261E # WHITE RIGHT POINTING INDEX
+<Multi_key> <f> <Down> : "☟" U261F # WHITE DOWN POINTING INDEX
+<Multi_key> <f> <v> : "✌" U270C # VICTORY HAND
+<Multi_key> <f> <w> : "✍" U270D # WRITING HAND
+<Multi_key> <f> <p> <Down> : "✎" U270E # LOWER RIGHT PENCIL
+<Multi_key> <f> <p> <Right> : "✏" U270F # PENCIL
+<Multi_key> <f> <p> <Up> : "✐" U2710 # UPPER RIGHT PENCIL
+
+# For some logical statements. I prefer doubled arrows for implication.
+<Multi_key> <equal> <greater> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key> <equal> <less> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key> <less> <minus> <equal> <greater> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key> <equal> <Right> <Right> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key> <equal> <Left> <Left> : "⇐" U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key> <equal> <Left> <Right> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key> <equal> <Right> <Left> : "⇔" U21D4 # LEFT RIGHT DOUBLE ARROW
+<Multi_key> <equal> <Up> <Up> : "⇑" U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key> <equal> <Down> <Down> : "⇓" U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key> <equal> <Up> <Down> : "⇕" U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key> <equal> <Down> <Left> : "⏎" U23CE # RETURN SYMBOL
+# These are just too cool-looking not to have (if your font supports them)
+<Multi_key> <equal> <period> <equal> : "⸎" U2E0E # EDITORIAL CORONIS
+<Multi_key> <Multi_key> <p> <a> <l> <m> : "⸙" U2E19 # PALM BRANCH
+
+# Custom additions: Greek letters. Mapping corresponds to Emacs Greek
+# input method. Aristotle Pagaltzis informs me that this is the
+# standard Greek keyboard layout, which is good.
+<Multi_key> <asterisk> <a> : "α" U03B1 # GREEK SMALL LETTER ALPHA
+<Multi_key> <asterisk> <b> : "β" U03B2 # GREEK SMALL LETTER BETA
+<Multi_key> <asterisk> <c> : "ψ" U03C8 # GREEK SMALL LETTER PSI
+<Multi_key> <asterisk> <d> : "δ" U03B4 # GREEK SMALL LETTER DELTA
+<Multi_key> <asterisk> <e> : "ε" U03B5 # GREEK SMALL LETTER EPSILON
+<Multi_key> <asterisk> <f> : "φ" U03C6 # GREEK SMALL LETTER PHI
+<Multi_key> <asterisk> <g> : "γ" U03B3 # GREEK SMALL LETTER GAMMA
+<Multi_key> <asterisk> <h> : "η" U03B7 # GREEK SMALL LETTER ΕΤΑ
+<Multi_key> <asterisk> <i> : "ι" U03B9 # GREEK SMALL LETTER ΙΟΤΑ
+<Multi_key> <asterisk> <j> : "ξ" U03BE # GREEK SMALL LETTER XI
+<Multi_key> <asterisk> <k> : "κ" U03BA # GREEK SMALL LETTER KAPPA
+<Multi_key> <asterisk> <l> : "λ" U03BB # GREEK SMALL LETTER LAMBDA
+<Multi_key> <asterisk> <m> : "μ" U03BC # GREEK SMALL LETTER MU
+<Multi_key> <asterisk> <n> : "ν" U03BD # GREEK SMALL LETTER NU
+<Multi_key> <asterisk> <o> : "ο" U03BF # GREEK SMALL LETTER OMICRON
+<Multi_key> <asterisk> <p> : "π" U03C0 # GREEK SMALL LETTER PI
+# no mapping for q; in Emacs that's ";"
+# U037E GREEK QUESTION MARK is canonically equivalent to U003B SEMICOLON.
+<Multi_key> <asterisk> <r> : "ρ" U03C1 # GREEK SMALL LETTER RHO
+<Multi_key> <asterisk> <s> : "σ" U03C3 # GREEK SMALL LETTER SIGMA
+<Multi_key> <asterisk> <t> : "τ" U03C4 # GREEK SMALL LETTER TAU
+<Multi_key> <asterisk> <u> : "θ" U03B8 # GREEK SMALL LETTER THETA
+<Multi_key> <asterisk> <v> : "ω" U03C9 # GREEK SMALL LETTER OMEGA
+<Multi_key> <asterisk> <w> : "ς" U03C2 # GREEK SMALL LETTER FINAL SIGMA
+<Multi_key> <asterisk> <x> : "χ" U03C7 # GREEK SMALL LETTER CHI
+<Multi_key> <asterisk> <y> : "υ" U03C5 # GREEK SMALL LETTER UPSILON
+<Multi_key> <asterisk> <z> : "ζ" U03B6 # GREEK SMALL LETTER ZETA
+
+# Capital greek letters.
+<Multi_key> <asterisk> <A> : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
+<Multi_key> <asterisk> <B> : "Β" U0392 # GREEK CAPITAL LETTER BETA
+<Multi_key> <asterisk> <C> : "Ψ" U03A8 # GREEK CAPITAL LETTER PSI
+<Multi_key> <asterisk> <D> : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
+<Multi_key> <asterisk> <E> : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
+<Multi_key> <asterisk> <F> : "Φ" U03A6 # GREEK CAPITAL LETTER PHI
+<Multi_key> <asterisk> <G> : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
+<Multi_key> <asterisk> <H> : "Η" U0397 # GREEK CAPITAL LETTER ΕΤΑ
+<Multi_key> <asterisk> <I> : "Ι" U0399 # GREEK CAPITAL LETTER ΙΟΤΑ
+<Multi_key> <asterisk> <J> : "Ξ" U039E # GREEK CAPITAL LETTER XI
+<Multi_key> <asterisk> <K> : "Κ" U039A # GREEK CAPITAL LETTER KAPPA
+<Multi_key> <asterisk> <L> : "Λ" U039B # GREEK CAPITAL LETTER LAMBDA
+<Multi_key> <asterisk> <M> : "Μ" U039C # GREEK CAPITAL LETTER MU
+<Multi_key> <asterisk> <N> : "Ν" U039D # GREEK CAPITAL LETTER NU
+<Multi_key> <asterisk> <O> : "Ο" U039F # GREEK CAPITAL LETTER OMICRON
+<Multi_key> <asterisk> <P> : "Π" U03A0 # GREEK CAPITAL LETTER PI
+# no mapping for Q; in Emacs that's ":"
+<Multi_key> <asterisk> <R> : "Ρ" U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <asterisk> <S> : "Σ" U03A3 # GREEK CAPITAL LETTER SIGMA
+<Multi_key> <asterisk> <T> : "Τ" U03A4 # GREEK CAPITAL LETTER TAU
+<Multi_key> <asterisk> <U> : "Θ" U0398 # GREEK CAPITAL LETTER THETA
+<Multi_key> <asterisk> <V> : "Ω" U03A9 # GREEK CAPITAL LETTER OMEGA
+# Emacs maps W to "Σ", but I think that’s stupid
+# I think that's from the Greek keyboard.
+<Multi_key> <asterisk> <X> : "Χ" U03A7 # GREEK CAPITAL LETTER CHI
+<Multi_key> <asterisk> <Y> : "Υ" U03A5 # GREEK CAPITAL LETTER UPSILON
+<Multi_key> <asterisk> <Z> : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
+
+# for chat 
+<Multi_key> <parenleft> <colon> : "☻" U263B # BLACK SMILING FACE
+<Multi_key> <colon> <parenright> : "☺" U263A # WHITE SMILING FACE
+<Multi_key> <colon> <parenleft> : "☹" U2639 # WHITE FROWNING FACE
+<Multi_key> <colon> <asciitilde> : "⍨" U2368 # APL FUNCTIONAL SYMBOL TILDE DIAERESIS
+<Multi_key> <colon> <bar> : "⸚" U2E1A # HYPHEN WITH DIAERESIS
+<Multi_key> <colon> <o> <o> <parenright> : "°͜°" # Funny smiley-face.
