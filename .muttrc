@@ -94,6 +94,9 @@ set pgp_use_gpg_agent
 set fcc_clear                     # Store sent mails decrpyted and unsigned 
 my_hdr X-PGP-Key: fp="D0BF 65B7 DBE2 8DB6 2BED  BF1B 683C 53C7 CF98 2D18"\; id="0xCF982D18"\; get=<hkp://pgp.mit.edu/pks/lookup?search=0x683C53C7CF982D18&op=get>\; get=<https://www.glatzor.de/files/gnupg/CF982D18.pub.asc>
 
+set smime_default=1108e33f.0
+set smime_sign_as=1108e33f.0
+
 # Address book
 #set query_command="abook --mutt-query '%s'"
 #macro pager,index A "|abook --add-email\n" "Add sender to address book"
