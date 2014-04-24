@@ -51,3 +51,5 @@ shopt -s histappend
 
 # Use nice fonts in Java
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+
+eval `dircolors .dircolors-solarized`
