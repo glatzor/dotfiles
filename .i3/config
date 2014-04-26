@@ -233,4 +233,8 @@ exec pactl set-sink-volume 0 '20%'
 exec xautolock
 
 exec owncloud
+exec syncevolution
+exec nm-applet
 exec /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec /usr/lib/gnome-online-accounts/goa-daemon
+
