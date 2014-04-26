@@ -211,8 +211,8 @@ assign [class="^UXTerm$" instance="^irssi$"] → "3: chat"
 # scratchpad
 bindsym $mod+Shift+dead_circumflex move scratchpad
 bindsym $mod+dead_circumflex scratchpad show
-# Start with a terminal in the scrathpad
-exec --no-startup-id i3-msg 'exec uxterm; move scratchpad'
+for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
+exec --no-startup-id urxvt -name urxvt_scratchpad
 
 # Screenshot taker
 bindsym --release $mod+Print exec --no-startup-id import -window root $HOME/screenshot-$(date +%Y-%m-%d).png
