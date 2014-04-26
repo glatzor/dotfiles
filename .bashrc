@@ -53,3 +53,6 @@ shopt -s histappend
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
 eval `dircolors .dircolors-solarized`
+
+# Store passwords in the primary X selection
+export PASSWORD_STORE_X_SELECTION=pri
