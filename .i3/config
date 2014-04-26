@@ -46,6 +46,10 @@ bindsym $mod+d exec dmenu_run -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#58
 # installed.
 bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
 
+#Start the quickswitch window switcher
+bindsym $mod+o exec --no-startup-id quickswitch.py --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+m exec --no-startup-id quickswitch.py -m --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
