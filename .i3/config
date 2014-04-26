@@ -224,13 +224,11 @@ exec feh --bg-fill Bilder/Wallpapers/tildchen-wide.JPG
 exec xrdb -merge ~/.Xresources
 ## DPMS monitor setting (standby -> suspend -> off) (seconds)
 exec xset dpms 300 600 900
+exec xss-lock -n /home/renate/bin/dim-screen.sh --transfer-sleep-lock /home/renate/bin/transfer-sleep-lock-i3lock.sh
 ## Disable beeps
 exec xset -b
 ## Set startup volume
 exec pactl set-sink-volume 0 '20%'
-
-# Configuration is in .Xresources
-exec xautolock
 
 exec owncloud
 exec syncevolution
