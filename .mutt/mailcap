@@ -1,7 +1,5 @@
 text/html; elinks -dump -eval "set document.codepage.assume = %{charset}" %s; copiousoutput
 application/pdf; mupdf %s
 image/*; display -resize 1024x768 -auto-orient %s ; test=test -n $DISPLAY
-# Convert images to text using the netpbm tools
-image/*;  (anytopnm %s | pnmscale -xysize 80 46 |\
-	ppmtopgm | pgmtopbm | pbmtoascii -1x2 ) 2>&1; copiousoutput
+image/*; /usr/bin/identify %s; copiousoutput
 application/x-pkcs7-signature;openssl pkcs7 -in %s -inform der -noout -print_certs -text | pager; needsterminal
