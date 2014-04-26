@@ -70,7 +70,8 @@ set pager_context=5               # Show a small context before and after
 set realname="Sebastian Heinlein"
 set from=sebi@glatzor.de
 set reverse_name                  # Automatically response with the To address
-alternates sh@dpool.net|sebastian.heinlein@web.de|glatzor@ubuntu.com|@glatzor.de
+alternates sh@dpool.net|sebastian.heinlein@dpool.com|glatzor@ubuntu.com|@glatzor.de
+unalternates angelique@
 
 alias privat    Sebastian Heinlein     <sebi@glatzor.de>
 alias dpool     Sebastian Heinlein     <sebastian.heinlein@dpool.com>
