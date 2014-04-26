@@ -1,5 +1,5 @@
 [global]
-    font = Monospace 8
+    font = Terminus 10
     allow_markup = yes
 
     # The format of the message. Possible variables are:
@@ -115,8 +115,8 @@
     browser = /usr/bin/firefox -new-window
 
 [frame]
-    width = 1
-    color = "#aaaaaa"
+    width = 2
+    color = "#eee8d5"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -140,18 +140,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#93a1a1"
+    foreground = "#eee8d5"
     timeout = 10
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#859900"
+    foreground = "#fdf6e3"
     timeout = 10
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
+    background = "#dc322f"
+    foreground = "#fdf6e3"
     timeout = 0
 
 
