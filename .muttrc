@@ -103,7 +103,8 @@ set query_command="mutt-eds-query '%s'"
 
 source ~/.mutt/muttrc.score
 source ~/.mutt/muttrc.lists
-source ~/.mutt/muttrc.colors
+#source ~/.mutt/muttrc.colors
+source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
 source ~/.mutt/muttrc.send
 
 macro index y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n\
