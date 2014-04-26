@@ -200,15 +200,6 @@ bindsym XF86AudioPrev exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && m
 # Window grouping
 for_window [class="Iceweasel"] focus child, layout stacking, focus
 
-# Automatically start
-exec --no-startup-id i3-msg 'workspace "1:main"; exec uxterm mutt; mark mailer'
-exec --no-startup-id i3-msg 'workspace "1:main"; exec uxterm' 
-exec --no-startup-id i3-msg 'workspace "2:web"; exec /usr/bin/firefox -browser' 
-exec --no-startup-id i3-msg 'workspace 4:dpool; exec /usr/bin/firefox -p dpool -no-remote -new-instance' 
-exec --no-startup-id i3-msg 'workspace "4:dpool"; exec uxterm' 
-
-bindsym $mod+m [con_mark="mailer"] focus
-
 # Save every pixel
 hide_edge_borders vertical
 
