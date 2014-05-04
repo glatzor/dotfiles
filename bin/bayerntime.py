@@ -50,7 +50,7 @@ if time_hour >= 13:
 if time_min == 0:
     print "genau " + hourLookup[time_hour]
 elif time_min == 60:
-    print "genau" + hourLookup[time_hour+1]
+    print "genau " + hourLookup[time_hour+1]
 elif time_min <= 5:
     print minLookup[time_min/5] + " " + hourLookup[time_hour]
 else:
