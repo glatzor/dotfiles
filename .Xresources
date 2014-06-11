@@ -21,11 +21,12 @@ URxvt.italicfont:      xft:Terminus-10:italic
 URxvt.bolditalicFont:  xft:Terminus-10:bold:italic
 !URxvt.letterSpace:     -1
 URxvt.lineSpace:       1
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,urxvt-colors
 URxvt.url-launcher:    /usr/bin/x-www-browser
 URxvt.matcher.button:  1
 URxvt.urgentOnBell:    true
 URxvt.saveLines:       65535
+URxvt.keysym.F12:      perl:urxvt-colors:
  
 ! XTERM
 xterm*VT100.geometry:     80x25
