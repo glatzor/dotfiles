@@ -61,7 +61,7 @@ set mailcap_path=~/.mutt/mailcap:/etc/mailcap
 macro index,pager \Cb "<pipe-message>urlview<enter>" \
                       "Extract URLs out of a message"
 
-set pager_index_lines=5           # Show the surrounding message in the pager
+set pager_index_lines=9           # Show the surrounding message in the pager
 set tilde                         # Fill blank lines with ~
 set pager_stop                    # Don't automatically switch to the next msg
 set pager_context=5               # Show a small context before and after
