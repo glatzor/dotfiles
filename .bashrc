@@ -62,7 +62,7 @@ alias ls="ls --color=tty"
 export EMAIL="sebi@glatzor.de"
 export DEBMAIL="devel@glatzor.de"
 
-export PATH="~/bin:$PATH"
+export PATH="~$HOME/.local/bin:$PATH"
 
 # The used mail indexer is required by the muttjump command
 export MUTTJUMP_INDEXER="notmuch"
