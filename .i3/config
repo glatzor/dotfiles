@@ -48,9 +48,9 @@ bindsym $mod+d exec dmenu_run -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#58
 bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
 
 #Start the quickswitch window switcher
-bindsym $mod+o exec --no-startup-id quickswitch.py --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
-bindsym $mod+Shift+o exec --no-startup-id quickswitch.py --workspaces --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
-bindsym $mod+m exec --no-startup-id quickswitch.py --move --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+o exec --no-startup-id quickswitch --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+Shift+o exec --no-startup-id quickswitch --workspaces --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+m exec --no-startup-id quickswitch --move --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
 
 # Use the passmenu command to access the password storage
 bindsym $mod+p exec --no-startup-id passmenu
