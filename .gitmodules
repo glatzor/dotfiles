@@ -13,3 +13,6 @@
 [submodule ".3rdparty/mutt-colors-solarized"]
 	path = .3rdparty/mutt-colors-solarized
 	url = https://github.com/altercation/mutt-colors-solarized.git
+[submodule ".3rdparty/dircolors-solarized"]
+	path = .3rdparty/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
