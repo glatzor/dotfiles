@@ -76,7 +76,7 @@ shopt -s histappend
 # Use nice fonts in Java
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 
-eval `dircolors $HOME/.dircolors-solarized`
+eval `dircolors $HOME/.3rdparty/dircolors-solarized/dircolors.ansi-dark`
 
 # Store passwords in the primary X selection
 export PASSWORD_STORE_X_SELECTION=pri
