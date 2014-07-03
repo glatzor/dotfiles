@@ -226,20 +226,20 @@ bindsym --release $mod+Print exec --no-startup-id import -window root $HOME/scre
 bindsym --release $mod+Shift+Print exec --no-startup-id import $HOME/screenshot-$(date +%Y-%m-%d).png
 
 # background image
-exec feh --bg-fill Bilder/Wallpapers/tildchen-wide.JPG
+exec --no-startup-id feh --bg-fill Bilder/Wallpapers/tildchen-wide.JPG
 # Load X configuration parameters
-exec xrdb -merge ~/.Xresources
+exec --no-startup-id xrdb -merge ~/.Xresources
 ## DPMS monitor setting (standby -> suspend -> off) (seconds)
-exec xset dpms 300 600 900
-exec xss-lock -n /home/renate/bin/dim-screen.sh --transfer-sleep-lock /home/renate/bin/transfer-sleep-lock-i3lock.sh
+exec --no-startup-id xset dpms 300 600 900
+exec --no-startup-id xss-lock -n /home/renate/bin/dim-screen.sh --transfer-sleep-lock /home/renate/bin/transfer-sleep-lock-i3lock.sh
 ## Disable beeps
-exec xset -b
+exec --no-startup-id xset -b
 ## Set startup volume
-exec pactl set-sink-volume 0 '20%'
+exec --no-startup-id pactl set-sink-volume 0 '20%'
 
-exec owncloud
-exec syncevolution
-exec nm-applet
-exec /usr/bin/gnome-keyring-daemon --start --components=secrets
-exec /usr/lib/gnome-online-accounts/goa-daemon
+exec --no-startup-id owncloud
+exec --no-startup-id syncevolution
+exec --no-startup-id nm-applet
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+
 
