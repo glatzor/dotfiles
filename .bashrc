@@ -36,24 +36,29 @@ else
 fi
 
 function prompt_command() {
-	export PS1='\[\033[0;33m\]\u@\h:\w\[\033[0m\]\$ '
 	# Set the window title to the current user, hostname and working dir
 	# Ignore my own user name for local shells
 	if [ "${USER}" != "renate" -o ! -z "$SSH_CLIENT" ]; then
-		echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"
+		PROMPT="\u@\h:\w"
+		TITLE="${USER}@${HOSTNAME} : ${PWD}"
 	else 
-		echo -ne "\033]0;${HOSTNAME}: ${PWD}\007"
-		# Optionally include the git branch if we are located in a
-		# git repository and not in the home directory
-		GIT_DIR="$(git rev-parse --git-dir 2>/dev/null)"
-		if [ -e /usr/bin/git -a "$PWD" != "$HOME" \
-		     -a "$GIT_DIR" != "$HOME/.git" ]; then
-			__git_ps1 '\[\033[0;33m\]\w\[\033[0m\]' \
-				'\[\033[0m\]\$ ' '(%s)'
-		else
-			export PS1='\[\033[0;33m\]\w\[\033[0m\]\$ '
-		fi
+		PROMPT="\w"
+		TITLE="${HOSTNAME} : ${PWD}"
 	fi
+	if [ "${TERM}" != "linux" ]; then
+		echo -ne "\033]0;${TITLE}\007"
+	fi
+	# Optionally include the git branch if we are located in a
+	# git repository and not in the home directory
+	GIT_DIR="$(git rev-parse --git-dir 2>/dev/null)"
+	if [ -e /usr/bin/git -a "$PWD" != "$HOME" \
+	     -a "$GIT_DIR" != "$HOME/.git" ]; then
+		__git_ps1 "\[\033[0;33m\]${PROMPT}\033[0m\]" \
+			"\[\033[0m\]\$ " "(%s)"
+	else
+		export PS1="\[\033[0;33m\]${PROMPT}\033[0m\]\$ "
+	fi
+	unset TITLE PROMPT
 }
 PROMPT_COMMAND="prompt_command"
 
