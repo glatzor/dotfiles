@@ -246,5 +246,5 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # nbsp:level3n - AltGr + Space -> non breakable space
 #                AltGr + Shift + Space -> thin non breakable space
 # compose:menu - Use Menu as compose key
-exec --no-startup-id setxkbmap -option nbsp:level3n -option compose:menu
-#
+# caps:esacpe  - make CapsLock an additional ESC key
+exec --no-startup-id setxkbmap -option nbsp:level3n -option compose:menu -option caps:escape
