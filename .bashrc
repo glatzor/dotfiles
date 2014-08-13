@@ -87,3 +87,26 @@ eval `dircolors $HOME/.3rdparty/dircolors-solarized/dircolors.ansi-dark`
 
 # Store passwords in the primary X selection
 export PASSWORD_STORE_X_SELECTION=pri
+
+# Solarized colors for the Linux terminal
+if [ "$TERM" = "linux" ]; then
+	echo -en "\e]P0073642" # black
+	echo -en "\e]PFfdf6e3" # white
+	echo -en "\e]P8002b36" # darkgrey
+	echo -en "\e]P7eee8d5" # light grey
+	echo -en "\e]P1dc322f" # darkred
+	echo -en "\e]P9cb4b16" # red
+	echo -en "\e]P2859900" # darkgreen
+	echo -en "\e]PA586e75" # gren
+	echo -en "\e]P3b58900" # brown
+	echo -en "\e]PB657b83" # yellow
+	echo -en "\e]P4268bd2" # darkblue
+	echo -en "\e]PC839496" # blue
+	echo -en "\e]P5d33682" # darkmagenta
+	echo -en "\e]PD6c71c4" # magenta
+	echo -en "\e]P62aa198" # darkcyan
+	echo -en "\e]PE93a1a1" # cyan
+	echo -en "\e[2J"
+	echo -en 
+	clear # background artificats
+fi
