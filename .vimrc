@@ -166,3 +166,9 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+" EasyMotion colors
+hi link EasyMotionTarget Question
+hi link EasyMotionShade  Comment
+hi link EasyMotionTarget2First Question
+hi link EasyMotionTarget2Second MoreMsg
