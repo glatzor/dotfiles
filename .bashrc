@@ -79,6 +79,8 @@ export MUTTJUMP_INDEXER="notmuch"
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # Append commands to the bash history instead of replacing it on exit
 shopt -s histappend
+# Store the execution date in the history
+export HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Use nice fonts in Java
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
