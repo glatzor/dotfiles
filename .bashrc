@@ -22,18 +22,8 @@ export GIT_PS1_SHOWSTASHSTATE=1
 # Append $ if there are untracked changes
 #export GIT_PS1_SHOWUNTRACKEDFILES=1
 
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	COLOR_CHROOT="\[\033[1;30m\]"
-	COLOR_USER="\[\033[0;33m\]"
-	COLOR_DEFAULT="\[\033[0m\]"
-else
-	COLOR_CHROOT=
-	COLOR_USER=
-	COLOR_DEFAULT=
-fi
+COLOR_YELLOW="\[$(tput setaf 3)\]"
+COLOR_RESET="\[$(tput sgr0)\]"
 
 function prompt_command() {
 	# Set the window title to the current user, hostname and working dir
@@ -53,10 +43,10 @@ function prompt_command() {
 	GIT_DIR="$(git rev-parse --git-dir 2>/dev/null)"
 	if [ -e /usr/bin/git -a "$PWD" != "$HOME" \
 	     -a "$GIT_DIR" != "$HOME/.git" ]; then
-		__git_ps1 "\[\033[0;33m\]${PROMPT}\033[0m\]" \
-			"\[\033[0m\]\$ " "(%s)"
+		__git_ps1 "${COLOR_YELLOW}${PROMPT}${COLOR_RESET}" \
+			"{$COLOR_RESET}\$ " "(%s)"
 	else
-		export PS1="\[\033[0;33m\]${PROMPT}\033[0m\]\$ "
+		export PS1="${COLOR_YELLOW}${PROMPT}${COLOR_RESET}\$ "
 	fi
 	unset TITLE PROMPT
 }
