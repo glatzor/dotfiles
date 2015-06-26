@@ -54,7 +54,7 @@ PROMPT_COMMAND="prompt_command"
 
 # Aliases
 alias ls="ls --color=tty"
-alias wkhal="khal calendar --days 7"
+alias wkhal="khal calendar --days 14"
 
 export EMAIL="sebi@glatzor.de"
 export DEBMAIL="devel@glatzor.de"
