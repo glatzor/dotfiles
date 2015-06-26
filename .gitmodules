@@ -55,3 +55,12 @@
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/vim_cf3"]
+	path = .vim/bundle/vim_cf3
+	url = https://github.com/neilhwatson/vim_cf3.git
+[submodule ".vim/bundle/vim-mustache-handlebars"]
+	path = .vim/bundle/vim-mustache-handlebars
+	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule ".vim/bundle/vim-vagrant"]
+	path = .vim/bundle/vim-vagrant
+	url = git://github.com/markcornick/vim-vagrant.git
