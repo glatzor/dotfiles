@@ -37,7 +37,7 @@ macro index,pager \Cl "<change-folder>+Mailinglisten<enter>" \
 macro index,pager \Ca "<change-folder>+Archiv.`date +%Y`<enter>" \
                       "Change to the current archive folder"
 
-macro index,pager a "<save-message>+Archiv.`date +%Y`\n" "Archive the message"
+macro index,pager a "<decrypt-save>+Archiv.`date +%Y`\n" "Archive the message decrypted"
 macro index,pager S "<save-message>+Spam.Lernen\n" "Learn message as spam"
 
 # Sorting
