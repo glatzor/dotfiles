@@ -102,3 +102,7 @@ if [ "$TERM" = "linux" ]; then
 	echo -en 
 	clear # background artificats
 fi
+
+# case insensitve completion
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
