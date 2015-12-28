@@ -67,3 +67,9 @@
 [submodule ".vim/bundle/vim-taskwarrior"]
 	path = .vim/bundle/vim-taskwarrior
 	url = https://github.com/farseer90718/vim-taskwarrior
+[submodule ".vim/bundle/vim-notes"]
+	path = .vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
