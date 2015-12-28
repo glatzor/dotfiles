@@ -1,0 +1,32 @@
+[general]
+targets = julit,dpool
+inline_links = False
+
+[notifications]
+notifications = True
+backend = gobject
+only_on_new_tasks = True
+
+[dpool]
+service = jira
+jira.base_uri = https://support.dpool.net/
+jira.username = sebastian.heinlein
+jira.password = @oracle:use_keyring
+jira.query = assignee = sebastian.heinlein and status != closed and status != resolved
+jira.version = 5
+jira.import_labels_as_tags = True
+jira.label_template = jira_{{label}}
+add_tags = dpool,jira
+description_template = {{jirasummary}} - {{jiraid}}
+
+[julit]
+service = jira
+jira.base_uri = https://jira.julit.com
+jira.username = glatzor
+jira.password = @oracle:use_keyring
+jira.query = assignee = glatzor and status != closed and status != resolved
+jira.version = 5
+jira.import_labels_as_tags = True
+jira.label_template = jira_{{label}}
+add_tags = julit,jira
+description_template = {{jirasummary}} - {{jiraid}}
