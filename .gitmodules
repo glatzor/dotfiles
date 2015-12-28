@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/vim-vagrant"]
 	path = .vim/bundle/vim-vagrant
 	url = git://github.com/markcornick/vim-vagrant.git
+[submodule ".vim/bundle/vim-taskwarrior"]
+	path = .vim/bundle/vim-taskwarrior
+	url = https://github.com/farseer90718/vim-taskwarrior
