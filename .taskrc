@@ -1,0 +1,49 @@
+data.location=/home/renate/.task
+include /usr/share/task/solarized-dark-256.theme
+weekstart=Monday
+default.command=gtd
+search.case.sensitive=no
+
+# GTD UDAs
+uda.context.type	= string
+uda.context.label	= Context
+uda.context.values	= @agenda,@projects,@office,@home,@call,@computer,@waiting-for,@someday-maybe,@tour,@anywhere
+
+uda.brainpower.type	= string
+uda.brainpower.label	= Brainpower
+uda.brainpower.values	= H,M,L
+
+uda.estimate.type=numeric
+uda.estimate.label=Estimate
+
+# Bugwarrior UDAs
+uda.jiraurl.type=string
+uda.jiraurl.label=Jira URL
+uda.jiraestimate.type=numeric
+uda.jiraestimate.label=Estimate
+uda.jirasummary.type=string
+uda.jirasummary.label=Jira Summary
+uda.jiraid.type=string
+uda.jiraid.label=Jira Issue ID
+uda.jiradescription.type=string
+uda.jiradescription.label=Jira Description
+
+report.gtd.description	= Getting Things Done
+report.gtd.columns	= id,context,description
+report.gtd.sort		= context+,description+
+
+report.in.columns	= id,description
+report.in.description	= Inbox
+report.in.filter	= context.hasnt:@
+report.in.labels	= ID,Description
+
+context.dpool		= +dpool
+context.julit		= +julit
+context.opal		= +opal
+context.personal	= -dpool and -julit and -opal
+
+taskd.ca		= ~/.task/cert/ca.cert.pem
+taskd.key		= ~/.task/cert/sebastian_heinlein.key.pem
+taskd.certificate	= ~/.task/cert/sebastian_heinlein.cert.pem
+taskd.credentials	= Glatzor/Sebastian Heinlein/a76a9884-41a8-4078-9c4e-bdbb5220e152
+taskd.server		= glatzor.de:53589
