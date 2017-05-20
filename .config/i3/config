@@ -260,10 +260,12 @@ exec --no-startup-id xset -b
 ## Set startup volume
 exec --no-startup-id pactl set-sink-volume 0 '20%'
 
+exec --no-startup-id udisks-glue
 exec --no-startup-id owncloud
-exec --no-startup-id syncevolution
 exec --no-startup-id nm-applet
+exec --no-startup-id nagstamon
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 
 # Keyboard configuration
 # nbsp:level3n - AltGr + Space -> non breakable space
