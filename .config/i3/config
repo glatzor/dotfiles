@@ -28,6 +28,13 @@ client.focused          #b58900 #b58900 #eee8d5 #cb4b16
 client.unfocused        #586e75 #073642 #657b83 #292d2e
 client.focused_inactive #586e75 #073642 #93a1a1 #292d2e
 
+# Numix colors
+# class                 border  backgr. text    indicator
+#client.focused #d64937 #d64937 #dedede
+#client.unfocused #333333 #333333 #dedede
+#client.focused_inactive #333333 #333333 #dedede
+#client.urgent #383a3b #383a3b #ee0000
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -186,6 +193,15 @@ bar {
 		inactive_workspace #002b36 #002b36 #839496
 		urgent_workspace   #dc322f #dc322f #eee8d5
 
+		# Numix
+		#background #2d2d2d
+		#statusline #dedede
+		#separator #2d2d2d
+
+		#focused_workspace  #d64937 #d64937 #dedede
+		#active_workspace   #2d2d2d #5f676a #dedede
+		#inactive_workspace #2d2d2d #2d2d2d #888888
+		#urgent_workspace   #333333 #900000 #ffffff
 	}
 }
 
