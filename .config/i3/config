@@ -221,6 +221,9 @@ bindsym XF86AudioPlay exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && m
 bindsym XF86AudioNext exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --next
 bindsym XF86AudioPrev exec --no-startup-id [ -e /home/renate/.moc/socket2 ] && mocp --previous
 
+# Start file manager
+bindsym $mod+x exec --no-startup-id urxvt -e ranger
+
 # Window grouping
 for_window [class="Iceweasel"] focus child, layout stacking, focus
 
