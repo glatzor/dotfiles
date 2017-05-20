@@ -19,7 +19,8 @@ set $mod mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango:Terminus Bold 10
+# font pango:Terminus Bold 10
+font pango:Hack Bold 12
  
 # Solarized color theme
 # class                 border  backgr. text    indicator
@@ -41,19 +42,19 @@ bindsym $mod+Shift+q kill
 bindsym $mod+i exec --no-startup-id i3-input
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'
+bindsym $mod+d exec dmenu_run -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Hack-12'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop --term urxvt --display-binar --dmenu "dmenu -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Hack-12'"
 
 #Start the quickswitch window switcher
-bindsym $mod+o exec --no-startup-id quickswitch --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
-bindsym $mod+Shift+o exec --no-startup-id quickswitch --workspaces --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
-bindsym $mod+m exec --no-startup-id quickswitch --move --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Terminus-10'"
+bindsym $mod+o exec --no-startup-id quickswitch --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Hack-12'"
+bindsym $mod+Shift+o exec --no-startup-id quickswitch --workspaces --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Hack-12'"
+bindsym $mod+m exec --no-startup-id quickswitch --move --dmenu "dmenu.xft -b -i -l 20 -sb '#586e75' -sf '#eee8d5' -nb '#eee8d5' -nf '#586e75' -fn 'Hack-12'"
 
 # Use the passmenu command to access the password storage
-bindsym $mod+p exec --no-startup-id passmenu
+bindsym $mod+p exec --no-startup-id passmenu -fn 'Hack-12'
 
 # change focus
 bindsym $mod+h focus left
@@ -173,7 +174,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status | i3status-fuzzyclock.py
-	font pango:Terminus 10
+	font pango:Hack 12
 	colors {
 		# Solarized Theme
 		background #002b36
