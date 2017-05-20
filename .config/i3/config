@@ -271,3 +271,5 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 # compose:menu - Use Menu as compose key
 # caps:hyke    - makes CapsLock an additional WINDOWS key
 exec --no-startup-id setxkbmap -option nbsp:level3n -option compose:menu -option caps:hyper
+
+exec --no-startup-id /home/renate/.config/i3/load-layout.sh
