@@ -23,5 +23,5 @@ remotehost = glatzor.de
 remoteusereval = get_username("mail.glatzor.de")
 remotepasseval = get_password("mail.glatzor.de")
 ssl = yes
-cert_fingerprint = fd4d96d4e94e7ea70b97ca995f6f6323a995f649
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 folderfilter = lambda foldername: foldername in ['INBOX', "Drafts", "Spam.Lernen", "Mailinglisten"] or foldername.startswith("Archiv")
