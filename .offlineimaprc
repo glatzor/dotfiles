@@ -19,7 +19,7 @@ localfolders = ~/.mail
 
 [Repository Glatzor]
 type = IMAP
-remotehost = mail.glatzor.de
+remotehost = glatzor.de
 remoteusereval = get_username("mail.glatzor.de")
 remotepasseval = get_password("mail.glatzor.de")
 ssl = yes
