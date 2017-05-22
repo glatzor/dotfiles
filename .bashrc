@@ -106,3 +106,5 @@ fi
 # case insensitve completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
+
+. /usr/share/powerline/bindings/bash/powerline.sh
