@@ -98,7 +98,9 @@ my_hdr X-PGP-Key: fp="D0BF 65B7 DBE2 8DB6 2BED  BF1B 683C 53C7 CF98 2D18"\; id="
 set smime_sign_as=1108e33f.0
 
 # Address book
-set query_command="khard mutt --search '%s'"
+set query_command="khard email --parsable '%s'"
+bind editor <Tab> complete-query
+bind editor ^T    complete
 
 source ~/.mutt/muttrc.score
 source ~/.mutt/muttrc.lists
