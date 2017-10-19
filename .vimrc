@@ -28,6 +28,8 @@ set hlsearch
 " Disable highlighting with RETURN and clean the command line afterwards
 nnoremap <silent> <CR> :noh<CR><CR>
 
+set modelines=5
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
