@@ -6,21 +6,21 @@ Xautolock.locker: killall -SIGUSR1 dunst; i3lock --nofork --dpms -c 000000; kill
 ! FONT SETTINGS
 Xft.antialias:  true
 Xft.rgba:       rgb
+Xft.autohint:	1
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 Xft.render:     true
+Xft.dpi:	96
 
 ! URXVT
 URxvt.termName:        rxvt-256color 
+URxvt.geometry:	       80x24
 URxvt.depth:           32
 URxvt.scrollBar:       false
-URxvt.font:            xft:Terminus-10:regular
-URxvt.boldFont:        xft:Terminus-10:bold
-URxvt.italicfont:      xft:Terminus-10:italic
-URxvt.bolditalicFont:  xft:Terminus-10:bold:italic
-!URxvt.letterSpace:     -1
-URxvt.lineSpace:       1
+URxvt.font:            xft:Hack-10:regular
+URxvt.letterSpace:     -1
+!URxvt.lineSpace:       -1
 URxvt.perl-ext-common: default,matcher,urxvt-colors
 URxvt.url-launcher:    /usr/bin/x-www-browser
 URxvt.matcher.button:  1
@@ -30,7 +30,7 @@ URxvt.keysym.F12:      perl:urxvt-colors:
  
 ! XTERM
 xterm*VT100.geometry:     80x25
-xterm*faceName:           xft:Terminus
+xterm*faceName:           xft:Hack
 xterm*faceSize:           10
 xterm*dynamicColors:      true
 xterm*utf8:               2
