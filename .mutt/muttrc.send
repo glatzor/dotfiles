@@ -1,3 +1,4 @@
 send-hook '~A' 'my_hdr From: Sebastian Heinlein <sebi@glatzor.de>'
-send-hook '~t @dpool\.net' 'my_hdr From: Sebastian Heinlein <sh@dpool.net>'
+send-hook '~t @dpool\.' 'my_hdr From: Sebastian Heinlein <sebastian.heinlein@dpool.com>'
+send-hook '~f @dpool\.' set signature=~/.mutt/dpool.sig
 send-hook '~l' 'my_hdr From: Sebastian Heinlein <devel@glatzor.de>'
