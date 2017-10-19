@@ -173,3 +173,62 @@ hi link EasyMotionTarget Question
 hi link EasyMotionShade  Comment
 hi link EasyMotionTarget2First Question
 hi link EasyMotionTarget2Second MoreMsg
+
+" Vdebug
+" See https://www.mediacurrent.com/blog/debug-drupal-php-vim-vdebug
+let g:vdebug_options = {}
+let g:vdebug_options = {'server': ''}
+let g:vdebug_options = {'port': '9000'}
+let g:vdebug_options = {'ide_key': 'julit'}
+let g:vdebug_options = {'break_on_open': 1}
+let g:vdebug_options['watch_window_style'] = 'compact'
+let g:vdebug_options = {'path_maps' : {"/vagrant": "/home/renate/Administration/julit/jive/app/"} }
+let g:vdebug_keymap = {
+\    "run" : "<Leader>d",
+\    "run_to_cursor" : "<Down>",
+\    "step_over" : "<Up>",
+\    "step_into" : "<Left>",
+\    "step_out" : "<Right>",
+\    "close" : "q",
+\    "detach" : "x",
+\    "set_breakpoint" : "<Leader>b",
+\    "eval_visual" : "<Leader>e"
+\}
+
+" autocmd BufRead /tmp/mutt*      :source ~/.vim/mail
+
+" Required by cf3
+fun! Getchar()
+  let c = getchar()
+  if c != 0
+    let c = nr2char(c)
+  endif
+  return c
+endfun
+
+fun! Eatchar(pat)
+  let c = Getchar()
+  return (c =~ a:pat) ? '' : c
+endfun
+
+autocmd BufRead,BufNewFile ~/Dokumente/todo/notes/*.txt set filetype=pandoc
+
+:let g:notes_directories = ['~/.task/notes', '~/Documents/Notes']
+let g:notes_title_sync = 'no'
+
+filetype plugin on
+set grepprg=grep\ -nH\ $*
+filetype indent on
+let g:tex_flavor='latex'
+
+au FileType xhtml,html,htm,php,xml setlocal tabstop=4
+au FileType xhtml,html,htm,php,xml setlocal shiftwidth=4
+au FileType xhtml,html,htm,php,xml setlocal expandtab      " (et) expand tabs to spaces (use :retab to redo entire file)
+au FileType xhtml,html,htm,php,xml setlocal softtabstop=4   " (sts) makes spaces feel like tabs (like deleting)
+
+au FileType cf setlocal tabstop=2
+au FileType cf setlocal shiftwidth=2
+au FileType cf setlocal expandtab      " (et) expand tabs to spaces (use :retab to redo entire file)
+au FileType cf setlocal softtabstop=2   " (sts) makes spaces feel like tabs (like deleting)
+
+au BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=de_de
