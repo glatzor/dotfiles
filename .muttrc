@@ -58,7 +58,7 @@ hdr_order From: Subject: To: CC: BCC: Reply-To: Date:
 set implicit_autoview             # Show known mime types in the mail body
 alternative_order text/enriched text/plain text/html
 set mailcap_path=~/.mutt/mailcap:/etc/mailcap
-macro index,pager \Cb "<pipe-message>urlview<enter>" \
+macro index,pager \Cb "<pipe-message>urlscan<enter>" \
                       "Extract URLs out of a message"
 
 set pager_index_lines=9           # Show the surrounding message in the pager
