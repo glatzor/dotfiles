@@ -49,6 +49,9 @@ syntax on
 " Show matching brackets.
 set showmatch
 
+" Show each buffer in a separate tab
+set switchbuf=newtab
+
 " Theming
 set background=dark
 colorscheme solarized
