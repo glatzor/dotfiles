@@ -9,7 +9,6 @@
     "nodes": [
         {
             "name": "Profanity",
-            "percent": 0.5,
             "swallows": [
                {
                   "class": "^URxvt$",
@@ -20,12 +19,20 @@
         },
         {
             "name": "Slack",
-            "percent": 0.5,
             "swallows": [
                {
                   "class": "^Slack$",
-                  "instance": "^slack$",
-                  "window_role": "^browser\\-window$"
+                  "instance": "^slack$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "name": "Signal",
+            "swallows": [
+               {
+                  "class": "^Signal$",
+                  "instance": "^signal$"
                }
             ],
             "type": "con"

@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".3rdparty/pulsemixer"]
+	path = .3rdparty/pulsemixer
+	url = https://github.com/GeorgeFilipkin/pulsemixer.git
