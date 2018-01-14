@@ -10,7 +10,7 @@
             "swallows": [
                {
                "class": "^URxvt$",
-               "instance": "^mutt$",
+               "instance": "^mutt$"
                }
             ],
             "type": "con"
