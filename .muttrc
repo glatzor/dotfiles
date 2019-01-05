@@ -7,6 +7,9 @@ set auto_tag                      # Automatically apply actions to tagged msg
 set noconfirmappend
 unset wait_key
 
+# Avoid loosing mail drafts during reboots
+set tmpdir=/var/tmp
+
 # Layout
 set index_format="%Z %{%b %d} %?M?<%2M>&%4c? %-18.18L %?Y?[%Y] ?%s"
 set folder_format="%2C %f %> %t %N %8s"
