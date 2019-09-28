@@ -1,0 +1,7 @@
+#!/bin/sh
+tmpfile=/tmp/rangerpick
+if \[ -z "$1" \]; then
+  ranger --choosefiles $tmpfile && sed -i 's/^/<attach-file>/' $tmpfile && sed -i 's/$/<enter>/' $tmpfile && sed -i ':a;N;$!ba;s/\\n//g' $tmpfile && sed -i 's/^/push /' $tmpfile
+elif \[ $1 == "clean" \]; then
+  rm $tmpfile
+fi
